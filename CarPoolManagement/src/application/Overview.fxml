@@ -11,17 +11,50 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: #A7BAF1;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TabPane prefHeight="800.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
+      <TabPane prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: #A7BAF1;" tabClosingPolicy="UNAVAILABLE">
         <tabs>
-          <Tab text="Übersicht" />
+          <Tab text="Übersicht">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #A7BAF1;">
+                     <children>
+                        <Button layoutX="221.0" layoutY="36.0" mnemonicParsing="false" text="←">
+                           <font>
+                              <Font name="Arial Black" size="24.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="277.0" layoutY="36.0" mnemonicParsing="false" text="September 2016">
+                           <font>
+                              <Font name="Arial Black" size="24.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="524.0" layoutY="36.0" mnemonicParsing="false" text="→">
+                           <font>
+                              <Font name="Arial Black" size="24.0" />
+                           </font>
+                        </Button>
+                        <TableView layoutX="50.0" layoutY="150.0" prefHeight="580.0" prefWidth="700.0">
+                          <columns>
+                            <TableColumn prefWidth="100.0" text="Montag" />
+                            <TableColumn prefWidth="100.0" text="Dienstag" />
+                              <TableColumn prefWidth="100.0" text="Mittwoch" />
+                              <TableColumn prefWidth="100.0" text="Donnerstag" />
+                              <TableColumn prefWidth="100.0" text="Freitag" />
+                              <TableColumn prefWidth="100.0" text="Samstag" />
+                              <TableColumn prefWidth="100.0" text="Sonntag" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content></Tab>
             <Tab text="Neue Belegung">
                <content>
-                  <SplitPane dividerPositions="0.6459143968871596" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+                  <SplitPane dividerPositions="0.6472114137483788" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" style="-fx-background-color: #A7BAF1;">
                     <items>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                            <children>
@@ -59,19 +92,37 @@
                                     <Font name="Arial Black" size="14.0" />
                                  </font></Label>
                               <Spinner id="SpinnerVehicleType" layoutX="14.0" layoutY="59.0" />
-                              <Label id="LabelVehicleType" layoutX="14.0" layoutY="42.0" text="Fahrzeugtyp">
+                              <Label id="LabelVehicleType" layoutX="16.0" layoutY="40.0" text="Fahrzeugtyp">
                                  <font>
                                     <Font name="Arial Black" size="14.0" />
                                  </font></Label>
-                              <Label id="LabelSeats" layoutX="14.0" layoutY="95.0" text="Sitzplätze mind." />
+                              <Label id="LabelSeats" layoutX="14.0" layoutY="95.0" text="Sitzplätze mind.">
+                                 <font>
+                                    <Font name="Arial Black" size="14.0" />
+                                 </font></Label>
                               <TextField id="SpinnerSeats" layoutX="14.0" layoutY="112.0" />
                               <Spinner id="SpinnerFuel" layoutX="14.0" layoutY="159.0" />
-                              <Label id="LabelFuel" layoutX="14.0" layoutY="142.0" text="Kraftstoff" />
-                              <Label id="LabelTransmission" layoutX="14.0" layoutY="195.0" text="Getriebe" />
+                              <Label id="LabelFuel" layoutX="14.0" layoutY="142.0" text="Kraftstoff">
+                                 <font>
+                                    <Font name="Arial Black" size="14.0" />
+                                 </font></Label>
+                              <Label id="LabelTransmission" layoutX="14.0" layoutY="195.0" text="Getriebe">
+                                 <font>
+                                    <Font name="Arial Black" size="14.0" />
+                                 </font></Label>
                               <Spinner id="SpinnerTransmission" layoutX="14.0" layoutY="212.0" />
-                              <CheckBox id="CheckBoxNavigationsystem" layoutX="252.0" layoutY="51.0" mnemonicParsing="false" text="Navigationssystem" />
-                              <CheckBox id="CheckBoxTrailorHitch" layoutX="252.0" layoutY="76.0" mnemonicParsing="false" text="Anhängekupplung" />
-                              <Label id="LabelPollutionBadge" layoutX="451.0" layoutY="51.0" text="Umweltplakette" />
+                              <CheckBox id="CheckBoxNavigationsystem" layoutX="252.0" layoutY="51.0" mnemonicParsing="false" text="Navigationssystem">
+                                 <font>
+                                    <Font name="Arial Black" size="14.0" />
+                                 </font></CheckBox>
+                              <CheckBox id="CheckBoxTrailorHitch" layoutX="252.0" layoutY="76.0" mnemonicParsing="false" text="Anhängekupplung">
+                                 <font>
+                                    <Font name="Arial Black" size="14.0" />
+                                 </font></CheckBox>
+                              <Label id="LabelPollutionBadge" layoutX="451.0" layoutY="51.0" text="Umweltplakette">
+                                 <font>
+                                    <Font name="Arial Black" size="14.0" />
+                                 </font></Label>
                               <Spinner id="SpinnerPollutionBadge" layoutX="451.0" layoutY="72.0" />
                               <Button id="ButtonSearch" layoutX="686.0" layoutY="226.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Suchen">
                                  <font>
@@ -86,59 +137,152 @@
             </Tab>
             <Tab text="Neuer Mitarbeiter">
                <content>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #A7BAF1;">
                      <children>
-                        <Label id="LabelFirstName" layoutX="98.0" layoutY="127.0" text="Vorname" />
-                        <Label id="LabelLastName" layoutX="98.0" layoutY="192.0" text="Nachname" />
-                        <Label id="LabelPersonalNumber" layoutX="98.0" layoutY="256.0" text="Personalnummer" />
-                        <Label id="LabelDriveLicenseNumber" layoutX="98.0" layoutY="318.0" text="Führerscheinnummer" />
-                        <Label id="LabelLicenseClass" layoutX="489.0" layoutY="161.0" text="Führerscheinklassen" />
-                        <TextField id="TextFieldFirstName" layoutX="98.0" layoutY="144.0" />
-                        <TextField id="TextFieldLastName" layoutX="98.0" layoutY="209.0" />
-                        <TextField id="TextFieldPersonalNumber" layoutX="98.0" layoutY="273.0" />
-                        <TextField id="TextFieldDriveLicenseNumber" layoutX="98.0" layoutY="335.0" />
-                        <CheckBox id="CheckBoxA" layoutX="489.0" layoutY="185.0" mnemonicParsing="false" text="A" />
-                        <CheckBox id="CheckBoxA2" layoutX="489.0" layoutY="209.0" mnemonicParsing="false" text="A2" />
-                        <CheckBox id="CheckBoxA1" layoutX="489.0" layoutY="233.0" mnemonicParsing="false" text="A1" />
-                        <CheckBox id="CheckBoxAM" layoutX="489.0" layoutY="258.0" mnemonicParsing="false" text="AM" />
-                        <CheckBox id="CheckBoxM" layoutX="489.0" layoutY="282.0" mnemonicParsing="false" text="M" />
-                        <CheckBox id="CheckBoxB" layoutX="489.0" layoutY="306.0" mnemonicParsing="false" text="B" />
-                        <CheckBox id="CheckBox96" layoutX="489.0" layoutY="330.0" mnemonicParsing="false" text="B96" />
-                        <CheckBox id="CheckBoxBE" layoutX="489.0" layoutY="355.0" mnemonicParsing="false" text="BE" />
-                        <CheckBox id="CheckBoxC1" layoutX="489.0" layoutY="379.0" mnemonicParsing="false" text="C1" />
-                        <CheckBox id="CheckBoxC1E" layoutX="489.0" layoutY="403.0" mnemonicParsing="false" text="C1E" />
-                        <CheckBox id="CheckBoxC" layoutX="489.0" layoutY="427.0" mnemonicParsing="false" text="C" />
-                        <CheckBox id="CheckBoxCE" layoutX="489.0" layoutY="450.0" mnemonicParsing="false" text="CE" />
-                        <CheckBox id="CheckBoxD1" layoutX="489.0" layoutY="474.0" mnemonicParsing="false" text="D1" />
-                        <CheckBox id="CheckBoxD1E" layoutX="489.0" layoutY="497.0" mnemonicParsing="false" text="D1E" />
-                        <CheckBox id="CheckBoxD" layoutX="489.0" layoutY="519.0" mnemonicParsing="false" text="D" />
-                        <CheckBox id="CheckBoxDE" layoutX="489.0" layoutY="542.0" mnemonicParsing="false" text="DE" />
-                        <CheckBox id="CheckBoxL" layoutX="489.0" layoutY="566.0" mnemonicParsing="false" text="L" />
-                        <CheckBox id="CheckBoxT" layoutX="489.0" layoutY="590.0" mnemonicParsing="false" text="T" />
+                        <Label id="LabelFirstName" layoutX="360.0" layoutY="107.0" text="Vorname">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font></Label>
+                        <Label id="LabelLastName" layoutX="353.0" layoutY="179.0" text="Nachname">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font></Label>
+                        <Label id="LabelPersonalNumber" layoutX="335.0" layoutY="251.0" text="Personalnummer">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font></Label>
+                        <Label id="LabelDriveLicenseNumber" layoutX="313.0" layoutY="323.0" text="Führerscheinnummer">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font></Label>
+                        <Label id="LabelLicenseClass" layoutX="315.0" layoutY="393.0" text="Führerscheinklassen">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font></Label>
+                        <TextField id="TextFieldFirstName" layoutX="195.0" layoutY="129.0" prefHeight="50.0" prefWidth="400.0" />
+                        <TextField id="TextFieldLastName" layoutX="195.0" layoutY="201.0" prefHeight="50.0" prefWidth="400.0" />
+                        <TextField id="TextFieldPersonalNumber" layoutX="195.0" layoutY="273.0" prefHeight="50.0" prefWidth="400.0" />
+                        <TextField id="TextFieldDriveLicenseNumber" layoutX="195.0" layoutY="345.0" prefHeight="50.0" prefWidth="400.0" />
+                        <CheckBox id="CheckBoxA" layoutX="62.0" layoutY="430.0" mnemonicParsing="false" text="A">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font></CheckBox>
+                        <CheckBox id="CheckBoxA2" layoutX="62.0" layoutY="462.0" mnemonicParsing="false" text="A2">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font></CheckBox>
+                        <CheckBox id="CheckBoxA1" layoutX="62.0" layoutY="494.0" mnemonicParsing="false" text="A1">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font></CheckBox>
+                        <CheckBox id="CheckBoxAM" layoutX="62.0" layoutY="526.0" mnemonicParsing="false" text="AM">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font></CheckBox>
+                        <CheckBox id="CheckBoxM" layoutX="62.0" layoutY="558.0" mnemonicParsing="false" text="M">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font></CheckBox>
+                        <CheckBox id="CheckBoxB" layoutX="222.0" layoutY="430.0" mnemonicParsing="false" text="B">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font></CheckBox>
+                        <CheckBox id="CheckBox96" layoutX="222.0" layoutY="462.0" mnemonicParsing="false" text="B96">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font></CheckBox>
+                        <CheckBox id="CheckBoxBE" layoutX="222.0" layoutY="494.0" mnemonicParsing="false" text="BE">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font></CheckBox>
+                        <CheckBox id="CheckBoxC1" layoutX="382.0" layoutY="430.0" mnemonicParsing="false" text="C1">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font></CheckBox>
+                        <CheckBox id="CheckBoxC1E" layoutX="382.0" layoutY="462.0" mnemonicParsing="false" text="C1E">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font></CheckBox>
+                        <CheckBox id="CheckBoxC" layoutX="382.0" layoutY="494.0" mnemonicParsing="false" text="C">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font></CheckBox>
+                        <CheckBox id="CheckBoxCE" layoutX="382.0" layoutY="526.0" mnemonicParsing="false" text="CE">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font></CheckBox>
+                        <CheckBox id="CheckBoxD1" layoutX="542.0" layoutY="430.0" mnemonicParsing="false" text="D1">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font></CheckBox>
+                        <CheckBox id="CheckBoxD1E" layoutX="542.0" layoutY="462.0" mnemonicParsing="false" text="D1E">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font></CheckBox>
+                        <CheckBox id="CheckBoxD" layoutX="542.0" layoutY="492.0" mnemonicParsing="false" text="D">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font></CheckBox>
+                        <CheckBox id="CheckBoxDE" layoutX="542.0" layoutY="526.0" mnemonicParsing="false" text="DE">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font></CheckBox>
+                        <CheckBox id="CheckBoxL" layoutX="702.0" layoutY="430.0" mnemonicParsing="false" text="L">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font></CheckBox>
+                        <CheckBox id="CheckBoxT" layoutX="702.0" layoutY="462.0" mnemonicParsing="false" text="T">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font></CheckBox>
                         <Button id="ButtonSaveNewEmployee" layoutX="688.0" layoutY="725.0" mnemonicParsing="false" text="Speichern">
                            <font>
                               <Font name="Arial Black" size="14.0" />
                            </font>
                         </Button>
                      </children>
+                     <effect>
+                        <ColorAdjust />
+                     </effect>
                   </AnchorPane>
                </content>
             </Tab>
           <Tab text="Neues Fahrzeug">
                <content>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #A7BAF1;">
                      <children>
                         <Spinner id="SpinnerVehicleType" layoutX="256.0" layoutY="148.0" />
-                        <Label id="LabelVehicleType" layoutX="255.0" layoutY="131.0" text="Fahrzeugtyp" />
-                        <Label id="LabelSeats" layoutX="256.0" layoutY="173.0" text="Sitzplätze" />
+                        <Label id="LabelVehicleType" layoutX="255.0" layoutY="131.0" text="Fahrzeugtyp">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font></Label>
+                        <Label id="LabelSeats" layoutX="256.0" layoutY="173.0" text="Sitzplätze">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font></Label>
                         <TextField id="TextFieldSeats" layoutX="256.0" layoutY="190.0" />
                         <Spinner id="SpinnerFuel" layoutX="256.0" layoutY="232.0" />
-                        <Label id="LabelFuel" layoutX="256.0" layoutY="215.0" text="Kraftstoff" />
-                        <Label id="LabelTransmission" layoutX="256.0" layoutY="257.0" text="Getriebe" />
+                        <Label id="LabelFuel" layoutX="256.0" layoutY="215.0" text="Kraftstoff">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font></Label>
+                        <Label id="LabelTransmission" layoutX="256.0" layoutY="257.0" text="Getriebe">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font></Label>
                         <Spinner id="SpinnerTransmission" layoutX="256.0" layoutY="274.0" />
-                        <CheckBox id="CheckBoxNavigationsystem" layoutX="255.0" layoutY="407.0" mnemonicParsing="false" text="Navigationssystem" />
-                        <CheckBox id="CheckBoxTrailorHitch" layoutX="256.0" layoutY="377.0" mnemonicParsing="false" text="Anhängekupplung" />
-                        <Label id="LabelPollutionBadge" layoutX="256.0" layoutY="306.0" text="Umweltplakette" />
+                        <CheckBox id="CheckBoxNavigationsystem" layoutX="255.0" layoutY="407.0" mnemonicParsing="false" text="Navigationssystem">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font></CheckBox>
+                        <CheckBox id="CheckBoxTrailorHitch" layoutX="256.0" layoutY="377.0" mnemonicParsing="false" text="Anhängekupplung">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font></CheckBox>
+                        <Label id="LabelPollutionBadge" layoutX="256.0" layoutY="306.0" text="Umweltplakette">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font></Label>
                         <Spinner id="SpinnerPollutionBadge" layoutX="256.0" layoutY="323.0" />
                         <Button id="ButtonSaveNewVehicle" layoutX="686.0" layoutY="725.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Speichern">
                            <font>
@@ -146,16 +290,22 @@
                            </font>
                         </Button>
                         <TextField id="TextFieldLicensePlateNumber" layoutX="256.0" layoutY="106.0" />
-                        <Label id="LabelLicensePlateNumber" layoutX="255.0" layoutY="89.0" text="Kennzeichen" />
+                        <Label id="LabelLicensePlateNumber" layoutX="255.0" layoutY="89.0" text="Kennzeichen">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font></Label>
                         <TextField id="TextFieldLabel" layoutX="256.0" layoutY="64.0" />
-                        <Label id="LabelLabel" layoutX="255.0" layoutY="47.0" text="Bezeichnung" />
+                        <Label id="LabelLabel" layoutX="255.0" layoutY="47.0" text="Bezeichnung">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font></Label>
                      </children>
                   </AnchorPane>
                </content>
             </Tab>
             <Tab text="Mitarbeiter">
                <content>
-                  <SplitPane dividerPositions="0.7911802853437094" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+                  <SplitPane dividerPositions="0.7911802853437094" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" style="-fx-background-color: #A7BAF1;">
                     <items>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="593.0" prefWidth="800.0">
                            <children>
@@ -173,7 +323,10 @@
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="800.0">
                            <children>
                               <TextField id="TextFieldEmployeeSearch" layoutX="172.0" layoutY="52.0" prefHeight="25.0" prefWidth="456.0" />
-                              <Label id="LabelEmployeeSearch" layoutX="14.0" layoutY="14.0" text="MItarbeitersuche" />
+                              <Label id="LabelEmployeeSearch" layoutX="14.0" layoutY="14.0" text="MItarbeitersuche">
+                                 <font>
+                                    <Font name="Arial Black" size="14.0" />
+                                 </font></Label>
                               <Button id="ButtonSearchEmployee" layoutX="709.0" layoutY="107.0" mnemonicParsing="false" text="Suchen">
                                  <font>
                                     <Font name="Arial Black" size="14.0" />
@@ -186,7 +339,7 @@
                </content></Tab>
             <Tab text="Fahrzeuge">
                <content>
-                  <SplitPane dividerPositions="0.7976653696498055" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+                  <SplitPane dividerPositions="0.7976653696498055" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" style="-fx-background-color: #A7BAF1;">
                      <items>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="593.0" prefWidth="800.0">
                            <children>
@@ -208,7 +361,10 @@
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                            <children>
                               <TextField id="TextFieldVehichleSearch" layoutX="172.0" layoutY="52.0" prefHeight="25.0" prefWidth="456.0" />
-                              <Label id="LabelVehicleSearch" layoutX="14.0" layoutY="14.0" text="Fahrzeugsuche" />
+                              <Label id="LabelVehicleSearch" layoutX="14.0" layoutY="14.0" text="Fahrzeugsuche">
+                                 <font>
+                                    <Font name="Arial Black" size="14.0" />
+                                 </font></Label>
                               <Button id="ButtonSearchVehicle" layoutX="709.0" layoutY="107.0" mnemonicParsing="false" text="Suchen">
                                  <font>
                                     <Font name="Arial Black" size="14.0" />
@@ -221,7 +377,7 @@
                </content></Tab>
             <Tab text="Statistiken">
                <content>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #A7BAF1;">
                      <children>
                         <TableView layoutX="14.0" layoutY="37.0" prefHeight="111.0" prefWidth="452.0">
                           <columns>
@@ -230,8 +386,14 @@
                               <TableColumn prefWidth="150.0" text="Nutzung" />
                           </columns>
                         </TableView>
-                        <Label layoutX="14.0" layoutY="20.0" text="Fahrzeuge mit der meisten Nutzung" />
-                        <Label layoutX="14.0" layoutY="169.0" text="Fahrzeuge mit der geringsten Nutzung" />
+                        <Label layoutX="14.0" layoutY="20.0" text="Fahrzeuge mit der meisten Nutzung">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font></Label>
+                        <Label layoutX="14.0" layoutY="169.0" text="Fahrzeuge mit der geringsten Nutzung">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font></Label>
                         <TableView layoutX="14.0" layoutY="186.0" prefHeight="111.0" prefWidth="452.0">
                            <columns>
                               <TableColumn prefWidth="150.0" text="Bezeichnung" />
@@ -239,8 +401,14 @@
                               <TableColumn prefWidth="150.0" text="Nutzung" />
                            </columns>
                         </TableView>
-                        <Label layoutX="14.0" layoutY="312.0" text="Durchschnittliche Nutzungsdauer:" />
-                        <Label layoutX="14.0" layoutY="329.0" prefHeight="46.0" prefWidth="92.0" text="12,43 d" />
+                        <Label layoutX="14.0" layoutY="312.0" text="Durchschnittliche Nutzungsdauer:">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font></Label>
+                        <Label layoutX="14.0" layoutY="329.0" prefHeight="46.0" prefWidth="92.0" text="-,-- d" textFill="RED">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font></Label>
                      </children>
                   </AnchorPane>
                </content></Tab>
