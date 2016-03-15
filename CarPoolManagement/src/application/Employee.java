@@ -13,7 +13,6 @@ public class Employee {
 		this.lastname = lastname;
 		this.personalnumber=pn;
 		this.licencenumber=ln;
-		
 	}
 	
 	public void set_firstname(String firstname){
