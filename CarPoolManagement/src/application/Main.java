@@ -7,7 +7,6 @@ import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 
-
 public class Main extends Application {
 	@Override
 	
@@ -31,7 +30,6 @@ public class Main extends Application {
 		int personalnumber = einlesenZahl("Personalnummer");
 		int licencenumber = einlesenZahl("Führerscheinnummer");
 		
-		
 		String vehicleType = einlesenText("VT");
 		int seats = einlesenZahl("Anzahl Sitze");
 		String fuelType = einlesenText("FT");
@@ -40,7 +38,6 @@ public class Main extends Application {
 		String trailerHitch = einlesenText("TH"); 
 		String navigationSystem = einlesenText("NS");
 
-
 		//Aufruf des Konstruktors
 		Employee meinFahrzeug= new Employee(firstname, lastname, personalnumber, licencenumber);
 		//Fahrzeug meinFahrzeug= new Fahrzeug(5, "rot", 220, 5, 5);
@@ -48,7 +45,6 @@ public class Main extends Application {
 		
 		Car meinKumpel = new Car(vehicleType, seats, fuelType, transmission, pollutionBadge, trailerHitch, navigationSystem);
 		Car deinKumpel = new Car("Limo", 4, "Benzin", "Manual", "Grün", "Ja", "Ja");
-		
 		
 		//Ausgabe
 		System.out.println("Vorname lautet " + meinFahrzeug.get_firstname());	
@@ -63,15 +59,13 @@ public class Main extends Application {
 		System.out.println("Plakette " + meinKumpel.get_pollutionBadge());
 		System.out.println("Anhänger " + meinKumpel.get_trailerHitch());
 		System.out.println("Navi " + meinKumpel.get_navigationSystem());
-		
-		
+	
 		meinFahrzeug.set_firstname("Kollegah"); //Änderung des y Position Wertes  zu Testzwecken- für den "echten! Betrieb nicht sinnvoll!!!
 		
 		meinKumpel.set_transmission("Automatik");
 		
 		System.out.println("firstname " + meinFahrzeug.get_firstname()); //Ausgabe y Wert
 		System.out.println("Getriebe " + meinKumpel.get_transmission());
-		
 	}
 	
 	public static String einlesenText(String eingabewert) {
@@ -91,5 +85,4 @@ public class Main extends Application {
 	    inData = scan.nextLine();
 	    return Integer.parseInt(inData);
 	  }
-	
 }
