@@ -1,5 +1,7 @@
 package application;
+
 import java.util.Scanner;
+
 public class Car {
 	private static int zaehler;
 	private String vehicleType;
