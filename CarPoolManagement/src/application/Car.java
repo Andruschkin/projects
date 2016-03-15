@@ -9,17 +9,17 @@ public class Car {
 	private String fuelType;
 	private String transmission;
 	private String pollutionBadge;
-	private boolean trailerHitch;
-	private boolean navigationSystem;
+	private String trailerHitch;
+	private String navigationSystem;
 
-	protected Car(String vehicleType, int seats, String fuelType, String transmission, String pollutionBadge, boolean trailerHitch, boolean navigationSystem) { // Konstruktor
+	protected Car(String vehicleType, int seats, String fuelType, String transmission, String pollutionBadge, String trailerHitch2, String navigationSystem2) { // Konstruktor
 		this.vehicleType = vehicleType;
 		this.seats = seats;
 		this.fuelType = fuelType;
 		this.transmission = transmission;
 		this.pollutionBadge = pollutionBadge;
-		this.trailerHitch = trailerHitch;
-		this.navigationSystem = navigationSystem;
+		this.trailerHitch = trailerHitch2;
+		this.navigationSystem = navigationSystem2;
 	}
 	
 	public void set_vehicleType(String vehicleType) {
@@ -62,19 +62,19 @@ public class Car {
 		return this.pollutionBadge;
 	}
 
-	public void set_trailerHitch(boolean trailerHitch) {
+	public void set_trailerHitch(String trailerHitch) {
 		this.trailerHitch = trailerHitch;
 	}
 
-	public boolean get_trailerHitch() {
+	public String get_trailerHitch() {
 		return this.trailerHitch;
 	}
 	
-	public void set_navigationSystem(boolean navigationSystem) {
+	public void set_navigationSystem(String navigationSystem) {
 		this.navigationSystem = navigationSystem;
 	}
 
-	public boolean get_navigationSystem() {
+	public String get_navigationSystem() {
 		return this.navigationSystem;
 	}
 }
