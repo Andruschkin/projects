@@ -9,6 +9,7 @@ public class Car {
 	private String pollutionBadge;
 	private boolean trailerHitch;
 	private boolean navigationSystem;
+	private int i;
 
 	protected Car(String vehicleType, int seats, String fuelType, String transmission, String pollutionBadge, boolean trailerHitch, boolean navigationSystem) { // Konstruktor
 		this.vehicleType = vehicleType;
