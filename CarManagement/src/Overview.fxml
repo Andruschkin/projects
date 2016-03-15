@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TabPane prefHeight="800.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Übersicht" />
+            <Tab text="Neue Belegung">
+               <content>
+                  <SplitPane dividerPositions="0.6459143968871596" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <Button id="ButtonSaveNewEntry" layoutX="686.0" layoutY="451.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Speichern">
+                                 <font>
+                                    <Font name="Arial Black" size="14.0" />
+                                 </font>
+                              </Button>
+                              <DatePicker id="DatePickerBegin" layoutX="26.0" layoutY="110.0" prefHeight="50.0" prefWidth="250.0" />
+                              <DatePicker id="DatePickerEnd" layoutX="26.0" layoutY="179.0" prefHeight="50.0" prefWidth="250.0" />
+                              <Label id="LabelBegin" layoutX="27.0" layoutY="88.0" text="Beginn">
+                                 <font>
+                                    <Font name="Arial Black" size="14.0" />
+                                 </font></Label>
+                              <Label id="LabelEnd" layoutX="23.0" layoutY="160.0" text="Ende">
+                                 <font>
+                                    <Font name="Arial Black" size="14.0" />
+                                 </font></Label>
+                              <Spinner id="SpinnerDriver" layoutX="26.0" layoutY="259.0" prefHeight="50.0" prefWidth="250.0" />
+                              <Spinner id="SpinnerVehicle" layoutX="26.0" layoutY="345.0" prefHeight="50.0" prefWidth="250.0" />
+                              <Label id="LabelDriver" layoutX="26.0" layoutY="239.0" text="Fahrer">
+                                 <font>
+                                    <Font name="Arial Black" size="14.0" />
+                                 </font></Label>
+                              <Label id="LabelVehicle" layoutX="26.0" layoutY="328.0" text="Fahrzeug">
+                                 <font>
+                                    <Font name="Arial Black" size="14.0" />
+                                 </font></Label>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <Label id="LabelVehicleSearch" layoutX="14.0" layoutY="6.0" text="Fahrzeugsuche">
+                                 <font>
+                                    <Font name="Arial Black" size="14.0" />
+                                 </font></Label>
+                              <Spinner id="SpinnerVehicleType" layoutX="14.0" layoutY="59.0" />
+                              <Label id="LabelVehicleType" layoutX="14.0" layoutY="42.0" text="Fahrzeugtyp">
+                                 <font>
+                                    <Font name="Arial Black" size="14.0" />
+                                 </font></Label>
+                              <Label id="LabelSeats" layoutX="14.0" layoutY="95.0" text="Sitzplätze mind." />
+                              <TextField id="SpinnerSeats" layoutX="14.0" layoutY="112.0" />
+                              <Spinner id="SpinnerFuel" layoutX="14.0" layoutY="159.0" />
+                              <Label id="LabelFuel" layoutX="14.0" layoutY="142.0" text="Kraftstoff" />
+                              <Label id="LabelTransmission" layoutX="14.0" layoutY="195.0" text="Getriebe" />
+                              <Spinner id="SpinnerTransmission" layoutX="14.0" layoutY="212.0" />
+                              <CheckBox id="CheckBoxNavigationsystem" layoutX="252.0" layoutY="51.0" mnemonicParsing="false" text="Navigationssystem" />
+                              <CheckBox id="CheckBoxTrailorHitch" layoutX="252.0" layoutY="76.0" mnemonicParsing="false" text="Anhängekupplung" />
+                              <Label id="LabelPollutionBadge" layoutX="451.0" layoutY="51.0" text="Umweltplakette" />
+                              <Spinner id="SpinnerPollutionBadge" layoutX="451.0" layoutY="72.0" />
+                              <Button id="ButtonSearch" layoutX="686.0" layoutY="226.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Suchen">
+                                 <font>
+                                    <Font name="Arial Black" size="14.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </content>
+            </Tab>
+            <Tab text="Neuer Mitarbeiter">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label id="LabelFirstName" layoutX="98.0" layoutY="127.0" text="Vorname" />
+                        <Label id="LabelLastName" layoutX="98.0" layoutY="192.0" text="Nachname" />
+                        <Label id="LabelPersonalNumber" layoutX="98.0" layoutY="256.0" text="Personalnummer" />
+                        <Label id="LabelDriveLicenseNumber" layoutX="98.0" layoutY="318.0" text="Führerscheinnummer" />
+                        <Label id="LabelLicenseClass" layoutX="489.0" layoutY="161.0" text="Führerscheinklassen" />
+                        <TextField id="TextFieldFirstName" layoutX="98.0" layoutY="144.0" />
+                        <TextField id="TextFieldLastName" layoutX="98.0" layoutY="209.0" />
+                        <TextField id="TextFieldPersonalNumber" layoutX="98.0" layoutY="273.0" />
+                        <TextField id="TextFieldDriveLicenseNumber" layoutX="98.0" layoutY="335.0" />
+                        <CheckBox id="CheckBoxA" layoutX="489.0" layoutY="185.0" mnemonicParsing="false" text="A" />
+                        <CheckBox id="CheckBoxA2" layoutX="489.0" layoutY="209.0" mnemonicParsing="false" text="A2" />
+                        <CheckBox id="CheckBoxA1" layoutX="489.0" layoutY="233.0" mnemonicParsing="false" text="A1" />
+                        <CheckBox id="CheckBoxAM" layoutX="489.0" layoutY="258.0" mnemonicParsing="false" text="AM" />
+                        <CheckBox id="CheckBoxM" layoutX="489.0" layoutY="282.0" mnemonicParsing="false" text="M" />
+                        <CheckBox id="CheckBoxB" layoutX="489.0" layoutY="306.0" mnemonicParsing="false" text="B" />
+                        <CheckBox id="CheckBox96" layoutX="489.0" layoutY="330.0" mnemonicParsing="false" text="B96" />
+                        <CheckBox id="CheckBoxBE" layoutX="489.0" layoutY="355.0" mnemonicParsing="false" text="BE" />
+                        <CheckBox id="CheckBoxC1" layoutX="489.0" layoutY="379.0" mnemonicParsing="false" text="C1" />
+                        <CheckBox id="CheckBoxC1E" layoutX="489.0" layoutY="403.0" mnemonicParsing="false" text="C1E" />
+                        <CheckBox id="CheckBoxC" layoutX="489.0" layoutY="427.0" mnemonicParsing="false" text="C" />
+                        <CheckBox id="CheckBoxCE" layoutX="489.0" layoutY="450.0" mnemonicParsing="false" text="CE" />
+                        <CheckBox id="CheckBoxD1" layoutX="489.0" layoutY="474.0" mnemonicParsing="false" text="D1" />
+                        <CheckBox id="CheckBoxD1E" layoutX="489.0" layoutY="497.0" mnemonicParsing="false" text="D1E" />
+                        <CheckBox id="CheckBoxD" layoutX="489.0" layoutY="519.0" mnemonicParsing="false" text="D" />
+                        <CheckBox id="CheckBoxDE" layoutX="489.0" layoutY="542.0" mnemonicParsing="false" text="DE" />
+                        <CheckBox id="CheckBoxL" layoutX="489.0" layoutY="566.0" mnemonicParsing="false" text="L" />
+                        <CheckBox id="CheckBoxT" layoutX="489.0" layoutY="590.0" mnemonicParsing="false" text="T" />
+                        <Button id="ButtonSaveNewEmployee" layoutX="688.0" layoutY="725.0" mnemonicParsing="false" text="Speichern">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab text="Neues Fahrzeug">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Spinner id="SpinnerVehicleType" layoutX="256.0" layoutY="148.0" />
+                        <Label id="LabelVehicleType" layoutX="255.0" layoutY="131.0" text="Fahrzeugtyp" />
+                        <Label id="LabelSeats" layoutX="256.0" layoutY="173.0" text="Sitzplätze" />
+                        <TextField id="TextFieldSeats" layoutX="256.0" layoutY="190.0" />
+                        <Spinner id="SpinnerFuel" layoutX="256.0" layoutY="232.0" />
+                        <Label id="LabelFuel" layoutX="256.0" layoutY="215.0" text="Kraftstoff" />
+                        <Label id="LabelTransmission" layoutX="256.0" layoutY="257.0" text="Getriebe" />
+                        <Spinner id="SpinnerTransmission" layoutX="256.0" layoutY="274.0" />
+                        <CheckBox id="CheckBoxNavigationsystem" layoutX="255.0" layoutY="407.0" mnemonicParsing="false" text="Navigationssystem" />
+                        <CheckBox id="CheckBoxTrailorHitch" layoutX="256.0" layoutY="377.0" mnemonicParsing="false" text="Anhängekupplung" />
+                        <Label id="LabelPollutionBadge" layoutX="256.0" layoutY="306.0" text="Umweltplakette" />
+                        <Spinner id="SpinnerPollutionBadge" layoutX="256.0" layoutY="323.0" />
+                        <Button id="ButtonSaveNewVehicle" layoutX="686.0" layoutY="725.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Speichern">
+                           <font>
+                              <Font name="Arial Black" size="14.0" />
+                           </font>
+                        </Button>
+                        <TextField id="TextFieldLicensePlateNumber" layoutX="256.0" layoutY="106.0" />
+                        <Label id="LabelLicensePlateNumber" layoutX="255.0" layoutY="89.0" text="Kennzeichen" />
+                        <TextField id="TextFieldLabel" layoutX="256.0" layoutY="64.0" />
+                        <Label id="LabelLabel" layoutX="255.0" layoutY="47.0" text="Bezeichnung" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Mitarbeiter">
+               <content>
+                  <SplitPane dividerPositions="0.7911802853437094" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="593.0" prefWidth="800.0">
+                           <children>
+                              <TableView prefHeight="613.0" prefWidth="800.0">
+                                <columns>
+                                  <TableColumn prefWidth="150.0" text="Nachname" />
+                                  <TableColumn minWidth="0.0" prefWidth="150.0" text="Vorname" />
+                                    <TableColumn prefWidth="150.0" text="Personalnummer" />
+                                    <TableColumn prefWidth="150.0" text="Führerscheinnummer" />
+                                    <TableColumn prefWidth="150.0" text="Führerscheinklassen" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="800.0">
+                           <children>
+                              <TextField id="TextFieldEmployeeSearch" layoutX="172.0" layoutY="52.0" prefHeight="25.0" prefWidth="456.0" />
+                              <Label id="LabelEmployeeSearch" layoutX="14.0" layoutY="14.0" text="MItarbeitersuche" />
+                              <Button id="ButtonSearchEmployee" layoutX="709.0" layoutY="107.0" mnemonicParsing="false" text="Suchen">
+                                 <font>
+                                    <Font name="Arial Black" size="14.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </content></Tab>
+            <Tab text="Fahrzeuge">
+               <content>
+                  <SplitPane dividerPositions="0.7976653696498055" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+                     <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="593.0" prefWidth="800.0">
+                           <children>
+                              <TableView prefHeight="613.0" prefWidth="800.0">
+                                 <columns>
+                                    <TableColumn prefWidth="150.0" text="Bezeichnung" />
+                                    <TableColumn minWidth="0.0" text="Kennzeichen" />
+                                    <TableColumn prefWidth="100.0" text="Fahrzeugtyp" />
+                                    <TableColumn prefWidth="60.0" text="Sitzplätze" />
+                                    <TableColumn prefWidth="60.0" text="Kraftstoff" />
+                                    <TableColumn prefWidth="75.0" text="Getriebe" />
+                                    <TableColumn prefWidth="100.0" text="Umweltplakette" />
+                                    <TableColumn prefWidth="110.0" text="Anhängekupplung" />
+                                    <TableColumn prefWidth="60.0" text="Navi" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <TextField id="TextFieldVehichleSearch" layoutX="172.0" layoutY="52.0" prefHeight="25.0" prefWidth="456.0" />
+                              <Label id="LabelVehicleSearch" layoutX="14.0" layoutY="14.0" text="Fahrzeugsuche" />
+                              <Button id="ButtonSearchVehicle" layoutX="709.0" layoutY="107.0" mnemonicParsing="false" text="Suchen">
+                                 <font>
+                                    <Font name="Arial Black" size="14.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </items>
+                  </SplitPane>
+               </content></Tab>
+            <Tab text="Statistiken">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <TableView layoutX="14.0" layoutY="37.0" prefHeight="111.0" prefWidth="452.0">
+                          <columns>
+                            <TableColumn prefWidth="150.0" text="Bezeichnung" />
+                            <TableColumn prefWidth="150.0" text="Kennzeichen" />
+                              <TableColumn prefWidth="150.0" text="Nutzung" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="14.0" layoutY="20.0" text="Fahrzeuge mit der meisten Nutzung" />
+                        <Label layoutX="14.0" layoutY="169.0" text="Fahrzeuge mit der geringsten Nutzung" />
+                        <TableView layoutX="14.0" layoutY="186.0" prefHeight="111.0" prefWidth="452.0">
+                           <columns>
+                              <TableColumn prefWidth="150.0" text="Bezeichnung" />
+                              <TableColumn prefWidth="150.0" text="Kennzeichen" />
+                              <TableColumn prefWidth="150.0" text="Nutzung" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="14.0" layoutY="312.0" text="Durchschnittliche Nutzungsdauer:" />
+                        <Label layoutX="14.0" layoutY="329.0" prefHeight="46.0" prefWidth="92.0" text="12,43 d" />
+                     </children>
+                  </AnchorPane>
+               </content></Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
