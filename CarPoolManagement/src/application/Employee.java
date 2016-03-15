@@ -21,7 +21,6 @@ public class Employee {
 	public String get_firstname(){
 		return this.firstname;
 	}
-	
 	public void set_lastname(String lastname){
 		this.lastname=lastname;
 	}
@@ -40,6 +39,4 @@ public class Employee {
 	public int get_licencenumber(){
 		return this.licencenumber;
 	}
-	
 }
-
