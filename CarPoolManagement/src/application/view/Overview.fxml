@@ -251,51 +251,51 @@
                <content>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #A7BAF1;">
                      <children>
-                        <Spinner id="SpinnerVehicleType" layoutX="256.0" layoutY="148.0" />
-                        <Label id="LabelVehicleType" layoutX="255.0" layoutY="131.0" text="Fahrzeugtyp">
+                        <Spinner id="SpinnerVehicleType" layoutX="202.0" layoutY="273.0" prefHeight="50.0" prefWidth="400.0" />
+                        <Label id="LabelVehicleType" layoutX="355.0" layoutY="251.0" text="Fahrzeugtyp">
                            <font>
                               <Font name="Arial Black" size="14.0" />
                            </font></Label>
-                        <Label id="LabelSeats" layoutX="256.0" layoutY="173.0" text="Sitzplätze">
+                        <Label id="LabelSeats" layoutX="362.0" layoutY="323.0" text="Sitzplätze">
                            <font>
                               <Font name="Arial Black" size="14.0" />
                            </font></Label>
-                        <TextField id="TextFieldSeats" layoutX="256.0" layoutY="190.0" />
-                        <Spinner id="SpinnerFuel" layoutX="256.0" layoutY="232.0" />
-                        <Label id="LabelFuel" layoutX="256.0" layoutY="215.0" text="Kraftstoff">
+                        <TextField id="TextFieldSeats" layoutX="200.0" layoutY="345.0" prefHeight="50.0" prefWidth="400.0" />
+                        <Spinner id="SpinnerFuel" layoutX="203.0" layoutY="417.0" prefHeight="50.0" prefWidth="400.0" />
+                        <Label id="LabelFuel" layoutX="363.0" layoutY="395.0" text="Kraftstoff">
                            <font>
                               <Font name="Arial Black" size="14.0" />
                            </font></Label>
-                        <Label id="LabelTransmission" layoutX="256.0" layoutY="257.0" text="Getriebe">
+                        <Label id="LabelTransmission" layoutX="367.0" layoutY="467.0" text="Getriebe">
                            <font>
                               <Font name="Arial Black" size="14.0" />
                            </font></Label>
-                        <Spinner id="SpinnerTransmission" layoutX="256.0" layoutY="274.0" />
-                        <CheckBox id="CheckBoxNavigationsystem" layoutX="255.0" layoutY="407.0" mnemonicParsing="false" text="Navigationssystem">
+                        <Spinner id="SpinnerTransmission" layoutX="203.0" layoutY="489.0" prefHeight="50.0" prefWidth="400.0" />
+                        <CheckBox id="CheckBoxNavigationsystem" layoutX="322.0" layoutY="658.0" mnemonicParsing="false" text="Navigationssystem">
                            <font>
                               <Font name="Arial Black" size="14.0" />
                            </font></CheckBox>
-                        <CheckBox id="CheckBoxTrailorHitch" layoutX="256.0" layoutY="377.0" mnemonicParsing="false" text="Anhängekupplung">
+                        <CheckBox id="CheckBoxTrailorHitch" layoutX="322.0" layoutY="627.0" mnemonicParsing="false" text="Anhängekupplung">
                            <font>
                               <Font name="Arial Black" size="14.0" />
                            </font></CheckBox>
-                        <Label id="LabelPollutionBadge" layoutX="256.0" layoutY="306.0" text="Umweltplakette">
+                        <Label id="LabelPollutionBadge" layoutX="341.0" layoutY="539.0" text="Umweltplakette">
                            <font>
                               <Font name="Arial Black" size="14.0" />
                            </font></Label>
-                        <Spinner id="SpinnerPollutionBadge" layoutX="256.0" layoutY="323.0" />
+                        <Spinner id="SpinnerPollutionBadge" layoutX="203.0" layoutY="561.0" prefHeight="50.0" prefWidth="400.0" />
                         <Button id="ButtonSaveNewVehicle" layoutX="686.0" layoutY="725.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Speichern">
                            <font>
                               <Font name="Arial Black" size="14.0" />
                            </font>
                         </Button>
-                        <TextField id="TextFieldLicensePlateNumber" layoutX="256.0" layoutY="106.0" />
-                        <Label id="LabelLicensePlateNumber" layoutX="255.0" layoutY="89.0" text="Kennzeichen">
+                        <TextField id="TextFieldLicensePlateNumber" layoutX="201.0" layoutY="201.0" prefHeight="50.0" prefWidth="400.0" />
+                        <Label id="LabelLicensePlateNumber" layoutX="353.0" layoutY="179.0" text="Kennzeichen">
                            <font>
                               <Font name="Arial Black" size="14.0" />
                            </font></Label>
-                        <TextField id="TextFieldLabel" layoutX="256.0" layoutY="64.0" />
-                        <Label id="LabelLabel" layoutX="255.0" layoutY="47.0" text="Bezeichnung">
+                        <TextField id="TextFieldLabel" layoutX="201.0" layoutY="129.0" prefHeight="50.0" prefWidth="400.0" />
+                        <Label id="LabelLabel" layoutX="353.0" layoutY="107.0" text="Bezeichnung">
                            <font>
                               <Font name="Arial Black" size="14.0" />
                            </font></Label>
@@ -305,9 +305,9 @@
             </Tab>
             <Tab text="Mitarbeiter">
                <content>
-                  <SplitPane dividerPositions="0.7911802853437094" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" style="-fx-background-color: #A7BAF1;">
+                  <SplitPane dividerPositions="0.7509727626459144" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" style="-fx-background-color: #A7BAF1;">
                     <items>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="593.0" prefWidth="800.0">
+                      <AnchorPane>
                            <children>
                               <TableView prefHeight="613.0" prefWidth="800.0">
                                 <columns>
@@ -320,14 +320,14 @@
                               </TableView>
                            </children>
                         </AnchorPane>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="800.0">
+                      <AnchorPane minHeight="0.0" minWidth="0.0">
                            <children>
-                              <TextField id="TextFieldEmployeeSearch" layoutX="172.0" layoutY="52.0" prefHeight="25.0" prefWidth="456.0" />
-                              <Label id="LabelEmployeeSearch" layoutX="14.0" layoutY="14.0" text="MItarbeitersuche">
+                              <TextField id="TextFieldEmployeeSearch" layoutX="200.0" layoutY="70.0" prefHeight="50.0" prefWidth="400.0" />
+                              <Label id="LabelEmployeeSearch" layoutX="335.0" layoutY="30.0" text="Mitarbeitersuche">
                                  <font>
                                     <Font name="Arial Black" size="14.0" />
                                  </font></Label>
-                              <Button id="ButtonSearchEmployee" layoutX="709.0" layoutY="107.0" mnemonicParsing="false" text="Suchen">
+                              <Button id="ButtonSearchEmployee" layoutX="709.0" layoutY="106.0" mnemonicParsing="false" text="Suchen">
                                  <font>
                                     <Font name="Arial Black" size="14.0" />
                                  </font>
@@ -339,9 +339,9 @@
                </content></Tab>
             <Tab text="Fahrzeuge">
                <content>
-                  <SplitPane dividerPositions="0.7976653696498055" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" style="-fx-background-color: #A7BAF1;">
+                  <SplitPane dividerPositions="0.7509727626459144" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" style="-fx-background-color: #A7BAF1;">
                      <items>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="593.0" prefWidth="800.0">
+                        <AnchorPane>
                            <children>
                               <TableView prefHeight="613.0" prefWidth="800.0">
                                  <columns>
@@ -358,14 +358,14 @@
                               </TableView>
                            </children>
                         </AnchorPane>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                        <AnchorPane>
                            <children>
-                              <TextField id="TextFieldVehichleSearch" layoutX="172.0" layoutY="52.0" prefHeight="25.0" prefWidth="456.0" />
-                              <Label id="LabelVehicleSearch" layoutX="14.0" layoutY="14.0" text="Fahrzeugsuche">
+                              <TextField id="TextFieldVehichleSearch" layoutX="200.0" layoutY="70.0" prefHeight="50.0" prefWidth="400.0" />
+                              <Label id="LabelVehicleSearch" layoutX="342.0" layoutY="30.0" text="Fahrzeugsuche">
                                  <font>
                                     <Font name="Arial Black" size="14.0" />
                                  </font></Label>
-                              <Button id="ButtonSearchVehicle" layoutX="709.0" layoutY="107.0" mnemonicParsing="false" text="Suchen">
+                              <Button id="ButtonSearchVehicle" layoutX="709.0" layoutY="104.0" mnemonicParsing="false" text="Suchen">
                                  <font>
                                     <Font name="Arial Black" size="14.0" />
                                  </font>
@@ -379,33 +379,33 @@
                <content>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #A7BAF1;">
                      <children>
-                        <TableView layoutX="14.0" layoutY="37.0" prefHeight="111.0" prefWidth="452.0">
+                        <TableView layoutX="175.0" layoutY="36.0" prefHeight="111.0" prefWidth="452.0">
                           <columns>
                             <TableColumn prefWidth="150.0" text="Bezeichnung" />
                             <TableColumn prefWidth="150.0" text="Kennzeichen" />
                               <TableColumn prefWidth="150.0" text="Nutzung" />
                           </columns>
                         </TableView>
-                        <Label layoutX="14.0" layoutY="20.0" text="Fahrzeuge mit der meisten Nutzung">
+                        <Label layoutX="264.0" layoutY="14.0" text="Fahrzeuge mit der meisten Nutzung">
                            <font>
                               <Font name="Arial Black" size="14.0" />
                            </font></Label>
-                        <Label layoutX="14.0" layoutY="169.0" text="Fahrzeuge mit der geringsten Nutzung">
+                        <Label layoutX="254.0" layoutY="164.0" text="Fahrzeuge mit der geringsten Nutzung">
                            <font>
                               <Font name="Arial Black" size="14.0" />
                            </font></Label>
-                        <TableView layoutX="14.0" layoutY="186.0" prefHeight="111.0" prefWidth="452.0">
+                        <TableView layoutX="174.0" layoutY="186.0" prefHeight="111.0" prefWidth="452.0">
                            <columns>
                               <TableColumn prefWidth="150.0" text="Bezeichnung" />
                               <TableColumn prefWidth="150.0" text="Kennzeichen" />
                               <TableColumn prefWidth="150.0" text="Nutzung" />
                            </columns>
                         </TableView>
-                        <Label layoutX="14.0" layoutY="312.0" text="Durchschnittliche Nutzungsdauer:">
+                        <Label layoutX="271.0" layoutY="318.0" text="Durchschnittliche Nutzungsdauer:">
                            <font>
                               <Font name="Arial Black" size="14.0" />
                            </font></Label>
-                        <Label layoutX="14.0" layoutY="329.0" prefHeight="46.0" prefWidth="92.0" text="-,-- d" textFill="RED">
+                        <Label alignment="CENTER" layoutX="356.0" layoutY="340.0" prefHeight="46.0" prefWidth="92.0" text="-,-- d" textFill="RED">
                            <font>
                               <Font name="Arial" size="14.0" />
                            </font></Label>
