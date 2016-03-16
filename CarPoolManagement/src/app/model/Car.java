@@ -1,10 +1,11 @@
-package application.model;
+package app.model;
 
 import java.util.Scanner;
 
 import application.Main;
 
-public class Car extends Main{
+public class Car extends app.Main{
+	
 	private static int zaehler;
 	private String vehicleType;
 	public int seats;

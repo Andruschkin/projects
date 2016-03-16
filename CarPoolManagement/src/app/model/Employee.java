@@ -1,8 +1,6 @@
-package application.model;
+package app.model;
 
-import application.Main;
-
-public class Employee extends Main {
+public class Employee extends app.Main {
 	
 	private String firstname;
 	private String lastname;

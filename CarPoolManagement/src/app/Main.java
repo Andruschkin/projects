@@ -1,10 +1,7 @@
-package application;
-	
-import java.io.IOException;
-import java.util.Scanner;
+package app;
 
-import application.model.Car;
-import application.model.Employee;
+import java.io.IOException;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -22,19 +19,19 @@ public class Main extends Application {
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("AddressApp");
 
-        initrootLayout();
+        initRootLayout();
 
-        showOverview();
+        showPersonOverview();
     }
 
     /**
      * Initializes the root layout.
      */
-    public void initrootLayout() {
+    public void initRootLayout() {
         try {
             // Load root layout from fxml file.
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Main.class.getResource("view/rootLayout.fxml"));
+            loader.setLocation(Main.class.getResource("view/RootLayout.fxml"));
             rootLayout = (BorderPane) loader.load();
 
             // Show the scene containing the root layout.
@@ -49,11 +46,11 @@ public class Main extends Application {
     /**
      * Shows the person overview inside the root layout.
      */
-    public void showOverview() {
+    public void showPersonOverview() {
         try {
             // Load person overview.
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Main.class.getResource("view/Overview.fxml"));
+            loader.setLocation(Main.class.getResource("view/PersonOverview.fxml"));
             AnchorPane personOverview = (AnchorPane) loader.load();
 
             // Set person overview into the center of root layout.
@@ -70,8 +67,8 @@ public class Main extends Application {
     public Stage getPrimaryStage() {
         return primaryStage;
     }
-	
-	public static void main(String[] args) {
-		launch(args);
-	}
+
+    public static void main(String[] args) {
+        launch(args);
+    }
 }
