@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import application.Main;
 
-public class Car extends app.Main{
+public class Car extends app.MainApp{
 	
 	private static int zaehler;
 	private String vehicleType;

@@ -1,6 +1,6 @@
 package app.model;
 
-public class Employee extends app.Main {
+public class Employee extends app.MainApp {
 	
 	private String firstname;
 	private String lastname;
