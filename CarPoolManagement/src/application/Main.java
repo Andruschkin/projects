@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
+import model.Car;
+import model.Employee;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 
