@@ -6,6 +6,7 @@ public class Employee extends app.MainApp {
 	private String lastname;
 	public  int personalnumber;	
 	private int licencenumber;
+	private boolean A, A2, A1, AM, M, B, B96, BE, C1, C1E, C, CE, D1, D1E, D, DE;
 
 	public Employee(String firstname, String lastname, int pn, int ln){ //Konstruktor
 		
