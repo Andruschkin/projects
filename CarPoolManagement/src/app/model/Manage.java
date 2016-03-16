@@ -4,7 +4,9 @@ import java.util.Scanner;
 
 public class Manage {
 	
-	public static void manage() {
+	
+	
+	/*public static void manage() {
 
 	String firstname = einlesenText("Vorname");
 	String lastname = einlesenText("Nachname");
@@ -69,6 +71,6 @@ public class Manage {
 		System.out.println(eingabewert);
 		inData = scan.nextLine();
 		return Integer.parseInt(inData);
-	}
+	}*/
 
 }
