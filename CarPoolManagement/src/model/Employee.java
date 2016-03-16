@@ -1,13 +1,15 @@
 package model;
 
-public class Employee {
+import application.Main;
+
+public class Employee extends Main {
 	
 	private String firstname;
 	private String lastname;
 	public  int personalnumber;	
 	private int licencenumber;
 
-	protected Employee(String firstname, String lastname, int pn, int ln){ //Konstruktor
+	public Employee(String firstname, String lastname, int pn, int ln){ //Konstruktor
 		
 		this.firstname=firstname;
 		this.lastname = lastname;

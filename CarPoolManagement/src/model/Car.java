@@ -2,7 +2,9 @@ package model;
 
 import java.util.Scanner;
 
-public class Car {
+import application.Main;
+
+public class Car extends Main{
 	private static int zaehler;
 	private String vehicleType;
 	public int seats;
@@ -12,7 +14,7 @@ public class Car {
 	private String trailerHitch;
 	private String navigationSystem;
 
-	protected Car(String vehicleType, int seats, String fuelType, String transmission, String pollutionBadge, String trailerHitch2, String navigationSystem2) { // Konstruktor
+	public Car(String vehicleType, int seats, String fuelType, String transmission, String pollutionBadge, String trailerHitch2, String navigationSystem2) { // Konstruktor
 		this.vehicleType = vehicleType;
 		this.seats = seats;
 		this.fuelType = fuelType;
