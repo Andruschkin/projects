@@ -2,7 +2,7 @@ package cpm.application.model;
 
 import java.util.Scanner;
 
-public class Manage {
+public class Manage extends cpm.application.MainApp{
 	
 	public static void manage() {
 

@@ -1,6 +1,6 @@
 package cpm.application.model;
 
-public class Employee extends app.MainApp {
+public class Employee extends cpm.application.MainApp {
 	
 	private String firstname;
 	private String lastname;

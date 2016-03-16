@@ -2,9 +2,7 @@ package cpm.application.model;
 
 import java.util.Scanner;
 
-import application.Main;
-
-public class Car extends app.MainApp{
+public class Car extends cpm.application.MainApp{
 	
 	private static int zaehler;
 	private String vehicleType;
