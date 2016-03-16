@@ -21,7 +21,7 @@ public class MainApp extends Application {
 
         initRootLayout();
 
-        showPersonOverview();
+        showOverview();
     }
 
     /**
