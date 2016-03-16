@@ -2,10 +2,8 @@ package app.model;
 
 import java.util.Scanner;
 
-import application.Main;
+public class Car {
 
-public class Car extends app.MainApp{
-	
 	private static int zaehler;
 	private String vehicleType;
 	public int seats;
@@ -24,7 +22,7 @@ public class Car extends app.MainApp{
 		this.trailerHitch = trailerHitch2;
 		this.navigationSystem = navigationSystem2;
 	}
-	
+
 	public void set_vehicleType(String vehicleType) {
 		this.vehicleType = vehicleType;
 	}
@@ -72,7 +70,7 @@ public class Car extends app.MainApp{
 	public String get_trailerHitch() {
 		return this.trailerHitch;
 	}
-	
+
 	public void set_navigationSystem(String navigationSystem) {
 		this.navigationSystem = navigationSystem;
 	}
