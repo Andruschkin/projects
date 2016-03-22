@@ -3,74 +3,115 @@ package app.model;
 import java.util.Scanner;
 
 public class Manage {
-	
-	
-	
-	/*public static void manage() {
 
-	String firstname = einlesenText("Vorname");
-	String lastname = einlesenText("Nachname");
-	int personalnumber = einlesenZahl("Personalnummer");
-	int licencenumber = einlesenZahl("Führerscheinnummer");
+	public static void manage() {
 
-	String vehicleType = einlesenText("VT");
-	int seats = einlesenZahl("Anzahl Sitze");
-	String fuelType = einlesenText("FT");
-	String transmission = einlesenText("transm");
-	String pollutionBadge = einlesenText("PB");
-	String trailerHitch = einlesenText("TH");
-	String navigationSystem = einlesenText("NS");
+//		class BSTNode<E extends Comparable<E>> {
+//			private E element = null;
+//			private BSTNode<E> left = null;
+//			private BSTNode<E> right = null;
+//
+//			BSTNode() {
+//			}
+//
+//			public BSTNode(E element, BSTNode<E> left, BSTNode<E> right) {
+//				this.element = element;
+//				this.left = left;
+//				this.right = right;
+//			}
+//			// ... Zugriffsmethoden etc.
+//		}
+//		// class BSTNode
+//		BSTNode<E> root;
 
-	// Aufruf des Konstruktors
-	Employee meinFahrzeug = new Employee(firstname, lastname, personalnumber, licencenumber);
-	// Fahrzeug meinFahrzeug= new Fahrzeug(5, "rot", 220, 5, 5);
-	Employee deinFahrzeug = new Employee("Hans", "Dieter", 180452, 15236970);
+//			// Hinzufügen eines neuen Mitarbeiters
+//			String firstname = einlesenText("Vorname");
+//			String lastname = einlesenText("Nachname");
+//			int personalnumber = einlesenZahl("Personalnummer");
+//			int licencenumber = einlesenZahl("Führerscheinnummer");
+//
+//			// Hinzufügen eines neuen Autos
+//			String carLabel = einlesenText("Bezeichnung");
+//			String licensePlate = einlesenText("Kennzeichen");
+//			String vehicleType = einlesenText("Fahrzeugart");
+//			int seats = einlesenZahl("Anzahl Sitze");
+//			String fuelType = einlesenText("Kraftstoffart");
+//			String transmission = einlesenText("Getriebe");
+//			String pollutionBadge = einlesenText("Umweltplakette");
+//			String trailerHitch = einlesenText("Anhängerkupplung");
+//			String navigationSystem = einlesenText("Navigationssystem");
 
-	Car meinKumpel = new Car(vehicleType, seats, fuelType, transmission, pollutionBadge, trailerHitch,
-			navigationSystem);
-	Car deinKumpel = new Car("Limo", 4, "Benzin", "Manual", "Grün", "Ja", "Ja");
+			// Beispiel Employee a = new Employee(firstname, lastname, personalnumber, licencenumber);
+			// Erzeugen eines Mitarbeiters
+			Employee boss = new Employee("Andreas", "Klamm", 12, 34);
 
-	// Ausgabe
-	System.out.println("Vorname lautet "+meinFahrzeug.get_firstname());
-	System.out.println("nachname "+meinFahrzeug.get_lastname());
-	System.out.println("personalnr. "+meinFahrzeug.get_personalnumber());
-	System.out.println("Füherscheinnr. "+meinFahrzeug.get_licencenumber());
+			// Beispiel Car nullnullnull = new Car(carLabel, licensePlate, vehicleType, seats, fuelType, transmission, pollutionBadge, trailerHitch, navigationSystem);
+			//Hinzufügen von Standardautos
+			Car car001 = new Car("BMW 3er 320d", "GF CT 001", "Limousine", 5, "Diesel", "Manual", "Schwarz", "Nein", "Ja");
+			Car car002 = new Car("BMW 5er 520d", "GF CT 002", "Touring", 5, "Diesel", "Manual", "Schwarz", "Ja", "Ja");
+			Car car003 = new Car("BMW 3er 316i", "GF CT 003", "Limousine", 5, "Benzin", "Manual", "Schwarz", "Nein", "Ja");
 
-	System.out.println("fahrzeugtyp "+meinKumpel.get_vehicleType());
-	System.out.println("sitze "+meinKumpel.get_seats());
-	System.out.println("Kraftstoff "+meinKumpel.get_fuelType());
-	System.out.println("Getriebe "+meinKumpel.get_transmission());
-	System.out.println("Plakette "+meinKumpel.get_pollutionBadge());
-	System.out.println("Anhänger "+meinKumpel.get_trailerHitch());
-	System.out.println("Navi "+meinKumpel.get_navigationSystem());
+			// Ausgabe des Arbeiters in der Konsole
+			System.out.println("Vorname "+boss.get_firstname());
+			System.out.println("Nachname "+boss.get_lastname());
+			System.out.println("Personalnummer "+boss.get_personalnumber());
+			System.out.println("Füherscheinnummer "+boss.get_licencenumber() + "\n");
 
-	meinFahrzeug.set_firstname("Kollegah"); // Änderung des y Position Wertes zu
-											// Testzwecken- für den "echten!
-											// Betrieb nicht sinnvoll!!!
+			// Ausgabe von Autos
+			System.out.println("Bezeichnung "+car001.get_carLabel());
+			System.out.println("Kennzeichen "+car001.get_licensePlate());
+			System.out.println("Fahrzeugtyp "+car001.get_vehicleType());
+			System.out.println("Anzahl Sitze "+car001.get_seats());
+			System.out.println("Kraftstoff "+car001.get_fuelType());
+			System.out.println("Getriebe "+car001.get_transmission());
+			System.out.println("Umweltplakette "+car001.get_pollutionBadge());
+			System.out.println("Anhängerkupplung "+car001.get_trailerHitch());
+			System.out.println("Navigationssystem "+car001.get_navigationSystem() + "\n");
 
-	meinKumpel.set_transmission("Automatik");
+			System.out.println("Bezeichnung "+car002.get_carLabel());
+			System.out.println("Kennzeichen "+car002.get_licensePlate());
+			System.out.println("Fahrzeugtyp "+car002.get_vehicleType());
+			System.out.println("Anzahl Sitze "+car002.get_seats());
+			System.out.println("Kraftstoff "+car002.get_fuelType());
+			System.out.println("Getriebe "+car002.get_transmission());
+			System.out.println("Umweltplakette "+car002.get_pollutionBadge());
+			System.out.println("Anhängerkupplung "+car002.get_trailerHitch());
+			System.out.println("Navigationssystem "+car002.get_navigationSystem() + "\n");
 
-	System.out.println("firstname "+meinFahrzeug.get_firstname()); // Ausgabe y
-																	// Wert
-	System.out.println("Getriebe "+meinKumpel.get_transmission());
-}
+			System.out.println("Bezeichnung "+car003.get_carLabel());
+			System.out.println("Kennzeichen "+car003.get_licensePlate());
+			System.out.println("Fahrzeugtyp "+car003.get_vehicleType());
+			System.out.println("Anzahl Sitze "+car003.get_seats());
+			System.out.println("Kraftstoff "+car003.get_fuelType());
+			System.out.println("Getriebe "+car003.get_transmission());
+			System.out.println("Umweltplakette "+car003.get_pollutionBadge());
+			System.out.println("Anhängerkupplung "+car003.get_trailerHitch());
+			System.out.println("Navigationssystem "+car003.get_navigationSystem() + "\n");
 
-	public static String einlesenText(String eingabewert) {
-		String inData;
-		Scanner scan = new Scanner(System.in);
+//			meinFahrzeug.set_firstname("Andreas");
+		// Nachträgliches ändern von Attributen
+//			meinKumpel.set_transmission("Automatik");
 
-		System.out.println(eingabewert);
-		inData = scan.nextLine();
-		return inData;
-	}
+		}
 
-	public static int einlesenZahl(String eingabewert) {
-		String inData;
-		Scanner scan = new Scanner(System.in);
+			// Funktion zum einlesen von Strings
+			public static String einlesenText(String eingabewert) {
+				String inData;
+				Scanner scan = new Scanner(System.in);
 
-		System.out.println(eingabewert);
-		inData = scan.nextLine();
-		return Integer.parseInt(inData);
-	}*/
+				System.out.println(eingabewert);
+				inData = scan.nextLine();
+				return inData;
+			}
 
-}
+			// Funktion zum einlesen von Zahlen
+			public static int einlesenZahl(String eingabewert) {
+				String inData;
+				Scanner scan = new Scanner(System.in);
+
+				System.out.println(eingabewert);
+				inData = scan.nextLine();
+				return Integer.parseInt(inData);
+			}
+
+		}
