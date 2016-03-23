@@ -1,7 +1,3 @@
-/*
- * http://algorithms.tutorialhorizon.com/binary-search-tree-complete-implementation/
- */
-
 package app.model;
 
 public class BST {
@@ -40,8 +36,7 @@ public class BST {
 				return false;
 			}
 		}
-		//if i am here that means we have found the node
-		//Case 1: if node to be deleted has no children
+
 		if(current.left==null && current.right==null){
 			if(current==root){
 				root = null;
@@ -52,7 +47,7 @@ public class BST {
 				parent.right = null;
 			}
 		}
-		//Case 2 : if node to be deleted has only one child
+
 		else if(current.right==null){
 			if(current==root){
 				root = current.left;
@@ -95,9 +90,7 @@ public class BST {
 			successsor = current;
 			current = current.left;
 		}
-		//check if successor has the right child, it cannot have left child for sure
-		// if it does have the right child, add it to the left of successorParent.
-//		successsorParent
+
 		if(successsor!=deleleNode.right){
 			successsorParent.left = successsor.right;
 			successsor.right = deleleNode.right;
