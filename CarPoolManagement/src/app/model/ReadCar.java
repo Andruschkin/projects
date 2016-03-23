@@ -11,8 +11,8 @@ import org.jdom2.JDOMException;
 import org.jdom2.input.SAXBuilder;
 
 
-public class Lesen{
- 
+public class ReadCar{
+
 	public static void lesen (String[] args) {
 	      try {
 	         File inputFile = new File("C:/Users/Basti/Desktop/Car.xml");
@@ -27,11 +27,11 @@ public class Lesen{
 	         List<Element> fuhrparklist = classElement.getChildren("Car");
 	         System.out.println("----------------------------");
 
-	         for (int temp = 0; temp < fuhrparklist.size(); temp++) {    
+	         for (int temp = 0; temp < fuhrparklist.size(); temp++) {
 	            Element supercarElement = fuhrparklist.get(temp);
 	            System.out.println("\nCurrent Element :" + supercarElement.getName());
 	            Attribute attribute =  supercarElement.getAttribute("ID");
-	            
+
 	            System.out.println("ID :                " + attribute.getValue() );
 	            System.out.println("Marke :             "+ supercarElement.getChild("carLabel").getText());
 	            System.out.println("Kennzeichen:        "+ supercarElement.getChild("licensePlate").getText());
@@ -42,9 +42,9 @@ public class Lesen{
 	            System.out.println("Umweltplakette:     "+ supercarElement.getChild("pollutionBadge").getText());
 	            System.out.println("Anhängerkupplung:   "+ supercarElement.getChild("trailerHitch").getText());
 	            System.out.println("Navigationssystem:  "+ supercarElement.getChild("navigationSystem").getText());
-	 	              
+
 	         }
-	         
+
 	      }catch(JDOMException e){
 	         e.printStackTrace();
 	      }catch(IOException ioe){
