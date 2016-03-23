@@ -72,7 +72,7 @@ public class MainApp extends Application {
     public static void main(String[] args) {
         launch(args);
         app.model.Manage.manage();
-        app.model.WriteCar.writecar(arg0);
-        app.model.ReadCar.readcar(arg0);
+        app.model.WriteCar.writeCar(args);
+        app.model.ReadCar.readCar(args);
     }
 }

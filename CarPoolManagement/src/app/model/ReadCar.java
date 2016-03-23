@@ -13,7 +13,7 @@ import org.jdom2.input.SAXBuilder;
 
 public class ReadCar{
 
-	public static void lesen (String[] args) {
+	public static void readCar (String[] args) {
 	      try {
 	         File inputFile = new File("/CarPoolManagement/Car.xml");
 

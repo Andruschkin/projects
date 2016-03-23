@@ -16,7 +16,7 @@ import org.w3c.dom.Node;
 
 public class WriteCar {
 
-	public static void write(String[] args) {
+	public static void writeCar(String[] args) {
 
 		 try {
 	            DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
