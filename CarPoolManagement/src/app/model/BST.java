@@ -1,3 +1,7 @@
+/*
+ * http://algorithms.tutorialhorizon.com/binary-search-tree-complete-implementation/
+ */
+
 package app.model;
 
 public class BST {
