@@ -10,13 +10,11 @@ public class NewCar extends Car{
 				navigationSystem);
 	}
 
-
 	public int i = 0;
 
 	List<Car> cars = new ArrayList<Car>();
 
 	Car car;
-
 
 	public void CreateNewCar (id, carLabel, licensePlate, vehicleType, seats, fuelType, transmission, pollutionBadge, trailerHitch, navigationSystem)
 	{
@@ -54,5 +52,3 @@ public class NewCar extends Car{
         // Hinzufügen des Fahrzeugs zur Array-Liste
         Car.cars.add(car);
 	}
-
-
