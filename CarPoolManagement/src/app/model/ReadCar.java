@@ -1,5 +1,4 @@
 package app.model;
-package blubbi;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,7 +12,7 @@ import org.jdom2.input.SAXBuilder;
 
 
 public class ReadCar{
- 
+
 	public static void readCar (String[] args) {
 	      try {
 	         File inputFile = new File("C:/Users/Basti/Desktop/Car.xml");
@@ -28,20 +27,20 @@ public class ReadCar{
 	         List<Element> fuhrparklist = classElement.getChildren("Pkw");
 	         System.out.println("----------------------------");
 
-	         for (int temp = 0; temp < fuhrparklist.size(); temp++) {    
+	         for (int temp = 0; temp < fuhrparklist.size(); temp++) {
 	            Element supercarElement = fuhrparklist.get(temp);
 	            System.out.println("\nCurrent Element :" + supercarElement.getName());
 	            Attribute attribute =  supercarElement.getAttribute("ID");
-	            
+
 	            System.out.println("ID : " + attribute.getValue() );
 	            System.out.println("Marke :      "+ supercarElement.getChild("Marke").getText());
 	            System.out.println("Modell:      "+ supercarElement.getChild("Modell").getText());
 	            System.out.println("Farbe:       "+ supercarElement.getChild("Farbe").getText());
-	           // System.out.println("Cabrio:      "+ supercarElement.getChild("Cabrio").getText());	   
+	           // System.out.println("Cabrio:      "+ supercarElement.getChild("Cabrio").getText());
 	            System.out.println("Ausstattung: "+ supercarElement.getChild("Ausstattung").getText());
-	                   
+
 	         }
-	         
+
 	      }catch(JDOMException e){
 	         e.printStackTrace();
 	      }catch(IOException ioe){
