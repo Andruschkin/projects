@@ -2,10 +2,11 @@ package app.model;
 
 public class Car {
 
+	private String id;
 	private String carLabel;
 	private String licensePlate;
 	private String vehicleType;
-	public int seats;
+	private String seats;
 	private String fuelType;
 	private String transmission;
 	private String pollutionBadge;
@@ -13,7 +14,8 @@ public class Car {
 	private String navigationSystem;
 
 	// Konstruktor
-	public Car(String carLabel, String licensePlate, String vehicleType, int seats, String fuelType, String transmission, String pollutionBadge, String trailerHitch, String navigationSystem) {
+	public Car(String id, String carLabel, String licensePlate, String vehicleType, String seats, String fuelType, String transmission, String pollutionBadge, String trailerHitch, String navigationSystem) {
+		this.id = id;
 		this.carLabel = carLabel;
 		this.licensePlate = licensePlate;
 		this.vehicleType = vehicleType;
@@ -25,6 +27,12 @@ public class Car {
 		this.navigationSystem = navigationSystem;
 	}
 
+	public void set_id(String id) {
+		this.id = id;
+	}
+	public String get_id() {
+		return this.id;
+	}
 	public void set_carLabel(String carLabel) {
 		this.carLabel = carLabel;
 	}
@@ -43,10 +51,10 @@ public class Car {
 	public String get_vehicleType() {
 		return this.vehicleType;
 	}
-	public void set_seats(int seats) {
+	public void set_seats(String seats) {
 		this.seats = seats;
 	}
-	public int get_seats() {
+	public String get_seats() {
 		return this.seats;
 	}
 	public void set_fuelType(String fuelType) {
