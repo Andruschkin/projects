@@ -24,15 +24,11 @@ public class WriteCar {
 	            Document doc = docBuilder.newDocument();
 
 	      // RootElement erzeugen      
-	            Element rootElement = doc.createElement("Fuhrpark");
+	            Element rootElement = doc.createElement("Carpool");
 	            doc.appendChild(rootElement);
 	            
 	     // Fahrzeuge dem RootElement anhängen       
-	            rootElement.appendChild(getFuhrpark(doc, "1", "BMW","4er", "DarkBlackMetallic", "M-Paket"));
-	            rootElement.appendChild(getFuhrpark(doc, "2", "Mercedes","CLA", "DarkBlackMetallic", "M-Paket"));
-	            rootElement.appendChild(getFuhrpark(doc, "3", "Audi","A7", "DarkBlackMetallic", "M-Paket"));
-	            rootElement.appendChild(getFuhrpark(doc, "4", "Volkswagen","Golf R", "DarkBlackMetallic", "M-Paket"));
-	            rootElement.appendChild(getFuhrpark(doc, "5", "Porsche","911 Turbo S", "DarkBlackMetallic", "M-Paket"));
+	            rootElement.appendChild(getFuhrpark(doc, "1", "BMW","fghjklöä", "Kombi", "5", "Petrol", "Manual", "Grün", "Y", "N" ));
 	 
 	     // als XML schreiben)
 	            TransformerFactory transformerFactory = TransformerFactory.newInstance();
@@ -51,17 +47,21 @@ public class WriteCar {
 
 	}
 
-	private static Node getFuhrpark(Document doc, String ID, String Marke, String Modell, String Farbe, String Ausstattung)
+	private static Node getFuhrpark(Document doc, String ID, String carLabel, String licensePlate, String vehicleType,String seats, String fuelType, String transmission, String pollutionBadge, String trailerHitch, String navigationSystem)
 	{
-		Element Pkw = doc.createElement("Pkw");
+		Element Pkw = doc.createElement("Car");
 		Pkw.setAttribute("ID", ID); 
-		Pkw.appendChild(getFuhrparkElements(doc, Pkw, "Marke", Marke));
-		Pkw.appendChild(getFuhrparkElements(doc, Pkw, "Modell", Modell));
-		Pkw.appendChild(getFuhrparkElements(doc, Pkw, "Farbe", Farbe));
-		Pkw.appendChild(getFuhrparkElements(doc, Pkw, "Ausstattung", Ausstattung));
-				
-		return Pkw;
+		Pkw.appendChild(getFuhrparkElements(doc, Pkw, "carLabel", carLabel));
+		Pkw.appendChild(getFuhrparkElements(doc, Pkw, "licensePlate", licensePlate));
+		Pkw.appendChild(getFuhrparkElements(doc, Pkw, "vehicleType", vehicleType));
+		Pkw.appendChild(getFuhrparkElements(doc, Pkw, "seats" , seats));
+		Pkw.appendChild(getFuhrparkElements(doc, Pkw, "fuelType", fuelType));
+		Pkw.appendChild(getFuhrparkElements(doc, Pkw, "transmission", transmission));
+		Pkw.appendChild(getFuhrparkElements(doc, Pkw, "pollutionBadge", pollutionBadge));
+		Pkw.appendChild(getFuhrparkElements(doc, Pkw, "trailerHitch", trailerHitch));
+		Pkw.appendChild(getFuhrparkElements(doc, Pkw, "navigationSystem", navigationSystem));
 
+		return Pkw;
 	}
 
 	private static Node getFuhrparkElements( Document doc, Element element, String name, String value)
