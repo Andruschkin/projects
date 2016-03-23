@@ -15,7 +15,7 @@ public class ReadCar{
 
 	public static void lesen (String[] args) {
 	      try {
-	         File inputFile = new File("C:/Users/Basti/Desktop/Car.xml");
+	         File inputFile = new File("/CarPoolManagement/Car.xml");
 
 	         SAXBuilder saxBuilder = new SAXBuilder();
 	         Document document = saxBuilder.build(inputFile);

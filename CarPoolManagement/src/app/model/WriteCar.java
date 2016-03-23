@@ -9,7 +9,7 @@ import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
- 
+
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -23,24 +23,24 @@ public class WriteCar {
 	            DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
 	            Document doc = docBuilder.newDocument();
 
-	      // RootElement erzeugen      
+	      // RootElement erzeugen
 	            Element rootElement = doc.createElement("Carpool");
 	            doc.appendChild(rootElement);
-	            
-	     // Fahrzeuge dem RootElement anhängen       
+
+	     // Fahrzeuge dem RootElement anhängen
 	            rootElement.appendChild(getFuhrpark(doc, "1", "BMW","fghjklöä", "Kombi", "5", "Petrol", "Manual", "Grün", "Y", "N" ));
-	 
+
 	     // als XML schreiben)
 	            TransformerFactory transformerFactory = TransformerFactory.newInstance();
 	            Transformer transformer = transformerFactory.newTransformer();
 	            DOMSource source = new DOMSource(doc);
-	            StreamResult result = new StreamResult(new File("C:/Users/Basti/Desktop/Car.xml")); 
+	            StreamResult result = new StreamResult(new File("/CarPoolManagement/Car.xml"));
 	            transformer.transform(source, result);
-	 
-	        } 
+
+	        }
 		 catch (ParserConfigurationException pce) {
 	            pce.printStackTrace();
-	        } 
+	        }
 		 catch (TransformerException tfe) {
 	            tfe.printStackTrace();
 	        }
@@ -50,7 +50,7 @@ public class WriteCar {
 	private static Node getFuhrpark(Document doc, String ID, String carLabel, String licensePlate, String vehicleType,String seats, String fuelType, String transmission, String pollutionBadge, String trailerHitch, String navigationSystem)
 	{
 		Element Pkw = doc.createElement("Car");
-		Pkw.setAttribute("ID", ID); 
+		Pkw.setAttribute("ID", ID);
 		Pkw.appendChild(getFuhrparkElements(doc, Pkw, "carLabel", carLabel));
 		Pkw.appendChild(getFuhrparkElements(doc, Pkw, "licensePlate", licensePlate));
 		Pkw.appendChild(getFuhrparkElements(doc, Pkw, "vehicleType", vehicleType));
@@ -68,7 +68,7 @@ public class WriteCar {
 	{
 		Element node = doc.createElement(name);
 		node.appendChild(doc.createTextNode(value));
-		
-		return node; 
+
+		return node;
 	}
 }
