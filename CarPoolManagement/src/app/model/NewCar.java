@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class NewCar extends Car{
+
 	public NewCar(String id, String carLabel, String licensePlate, String vehicleType, String seats, String fuelType,
 			String transmission, String pollutionBadge, String trailerHitch, String navigationSystem) {
 		super(id, carLabel, licensePlate, vehicleType, seats, fuelType, transmission, pollutionBadge, trailerHitch,
